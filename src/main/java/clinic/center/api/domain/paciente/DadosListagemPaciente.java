@@ -1,4 +1,4 @@
-package clinic.center.api.paciente;
+package clinic.center.api.domain.paciente;
 
 public record DadosListagemPaciente(Long id, String nome, String email, String cpf) {
 

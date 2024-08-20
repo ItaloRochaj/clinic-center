@@ -1,6 +1,6 @@
-package clinic.center.api.medico;
+package clinic.center.api.domain.medico;
 
-import clinic.center.api.endereco.DadosEndereco;
+import clinic.center.api.domain.endereco.DadosEndereco;
 
 public record DadosAtualizacaoMedico(
         Long id,

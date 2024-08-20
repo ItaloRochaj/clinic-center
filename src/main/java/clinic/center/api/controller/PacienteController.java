@@ -1,7 +1,6 @@
 package clinic.center.api.controller;
 
-import clinic.center.api.medico.DadosListagemMedico;
-import clinic.center.api.paciente.*;
+import clinic.center.api.domain.paciente.*;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +9,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("paciente")

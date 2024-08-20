@@ -1,4 +1,4 @@
-package clinic.center.api.endereco;
+package clinic.center.api.domain.endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

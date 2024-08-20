@@ -1,6 +1,6 @@
-package clinic.center.api.medico;
+package clinic.center.api.domain.medico;
 
-import clinic.center.api.endereco.Endereco;
+import clinic.center.api.domain.endereco.Endereco;
 
 public record DadosDetalhamentoMedico(Long id, String nome, String email, String crm, String telefone, Especialidade especialidade, Endereco endereco) {
 

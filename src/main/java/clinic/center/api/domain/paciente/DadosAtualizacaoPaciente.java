@@ -1,4 +1,4 @@
-package clinic.center.api.paciente;
+package clinic.center.api.domain.paciente;
 
 import jakarta.validation.constraints.NotNull;
 

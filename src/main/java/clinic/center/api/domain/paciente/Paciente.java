@@ -1,7 +1,7 @@
-package clinic.center.api.paciente;
+package clinic.center.api.domain.paciente;
 
 
-import clinic.center.api.endereco.Endereco;
+import clinic.center.api.domain.endereco.Endereco;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
