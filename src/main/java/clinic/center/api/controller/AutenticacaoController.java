@@ -1,6 +1,9 @@
 package clinic.center.api.controller;
 
 import clinic.center.api.domain.usuario.DadosAutenticacao;
+import clinic.center.api.domain.usuario.Usuario;
+import clinic.center.api.infra.security.DadosTokenJWT;
+import clinic.center.api.infra.security.TokenService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,14 +21,21 @@ public class AutenticacaoController {
     private final AuthenticationManager manager;
 
     @Autowired
+    private TokenService tokenService;
+
+    @Autowired
     public AutenticacaoController(AuthenticationManager manager) {
         this.manager = manager;
     }
 
     @PostMapping
     public ResponseEntity efetuarLogin(@RequestBody @Valid DadosAutenticacao dados) {
-        var token = new UsernamePasswordAuthenticationToken(dados.login(), dados.senha());
-        var authentication = manager.authenticate(token);
-        return ResponseEntity.ok().build();
+        var authenticationToken = new UsernamePasswordAuthenticationToken(dados.login(), dados.senha());
+        var authentication = manager.authenticate(authenticationToken);
+
+        var tokenJWT = tokenService.gerarToken((Usuario) authentication.getPrincipal());
+
+        return ResponseEntity.ok(new DadosTokenJWT(tokenJWT));
     }
+
 }
