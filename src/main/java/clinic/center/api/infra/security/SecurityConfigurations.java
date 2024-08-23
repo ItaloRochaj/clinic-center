@@ -11,17 +11,34 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-
 @Configuration
 @EnableWebSecurity
 public class SecurityConfigurations {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http.csrf().disable()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and().build();
+        http
+                .csrf(csrf -> csrf.disable()) // Corrigido para usar o novo estilo de configuração
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)); // Corrigido para usar o novo estilo de configuração
+
+        return http.build();
     }
+
+    //@Autowired
+    //private SecurityFilter securityFilter;
+    //
+    //@Bean
+    //public SecurityFilterChain (HttpSecurity http) throws Exception {
+    //    return http.csrf().disable()
+    //            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+    //            .and().authorizeHttpRequests()
+    //            .requestMatchers(HttpMethod.POST, "/login").permitAll()
+    //            .anyRequest().authenticated()
+    //            .and().addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
+    //            .build();
+    //} Esta depreciado!//
+
+
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
