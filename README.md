@@ -12,11 +12,11 @@ Enquanto a equipe de desenvolvimento será responsável pelo aplicativo mobile, 
 - **Cancelamento de Consultas**: Cancelar consultas agendadas com registro de motivo.
 
 ## 📷 Imagens do Projeto
-
-- ![Insomnia & IntelliJ](https://github.com/ItaloRochaj/clinic-center/blob/main/Insominia%2BInteliji.png)
 - ![Criação da API Clinic Center](https://github.com/ItaloRochaj/clinic-center/blob/main/Cria%C3%A7%C3%A3o%20API%20Clinic%20Center%20%20(1).png)
+- ![Insomnia & IntelliJ](https://github.com/ItaloRochaj/clinic-center/blob/main/Insominia%2BInteliji.png)
 - ![Insomnia](https://github.com/ItaloRochaj/clinic-center/blob/main/Insominia.png)
 - ![Projeto](https://github.com/ItaloRochaj/clinic-center/blob/main/Projeto.png)
+- ![Plano no Trello](https://github.com/ItaloRochaj/clinic-center/blob/main/Plano%20no%20Trello.png)
 
 ## 🎨 Layout
 
