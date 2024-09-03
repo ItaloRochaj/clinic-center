@@ -9,14 +9,16 @@ Enquanto um time de desenvolvimento será responsável pelo aplicativo mobile, o
 
  CRUD de médicos;
  CRUD de pacientes;
+ Agendamento de consultas;
+ Cancelamento de consultas;
 
- Agendamento de consultas(em breve);
+ Imagens do projeto 
 
- Cancelamento de consultas(em breve);
+ https://github.com/ItaloRochaj/clinic-center/blob/main/Insominia%2BInteliji.png
 
 🎨 Layout
 
-O layout da aplicação mobile está disponível neste link: Figma
+O layout da aplicação mobile está em desenvolvimento no Figma
 
 📄 Documentação
 
